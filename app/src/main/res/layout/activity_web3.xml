@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".web3">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="147dp"
+        android:layout_height="109dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/weblogos" />
+
+    <TextView
+        android:id="@+id/questionWeb3"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/app_name"
+        android:fontFamily="@font/capriola"
+        android:paddingRight="20dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <Button
+        android:id="@+id/optionA"
+        android:layout_width="150dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="48dp"
+        android:contentDescription="@string/app_name"
+        app:backgroundTint="#4B78FF"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/optionC"
+        app:layout_constraintEnd_toStartOf="@+id/optionB"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/optionB"
+        android:layout_width="150dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="48dp"
+        android:textColor="@color/white"
+
+        android:contentDescription="@string/app_name"
+        app:backgroundTint="#FF4B78FF"
+        app:layout_constraintBottom_toTopOf="@+id/optionD"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/optionC"
+        android:layout_width="150dp"
+        android:layout_height="67dp"
+        android:layout_marginBottom="220dp"
+        android:contentDescription="@string/app_name"
+        app:backgroundTint="#FF4B78FF"
+        android:textColor="@color/white"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/optionD"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/optionD"
+        android:layout_width="150dp"
+        android:layout_height="67dp"
+        android:layout_marginEnd="36dp"
+        android:textColor="@color/white"
+
+        android:layout_marginBottom="220dp"
+        android:contentDescription="@string/app_name"
+        app:backgroundTint="#FF4B78FF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
