@@ -12,6 +12,8 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.Toast;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -60,22 +62,29 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Best of luck, mate!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, webAndroid.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateSwipeRight(this);
 
     }
     public void web3(View view){
         Toast.makeText(this, "Best of luck, mate!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, web3.class);
-        startActivity(intent);
+        startActivity(intent);        Animatoo.INSTANCE.animateSwipeLeft(this);
+
+
     }
     public void blockchain(View view){
         Toast.makeText(this, "Best of luck, mate!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, blockchain.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateSwipeRight(this);
+
     }
     public void aiml(View view){
         Toast.makeText(this, "Best of luck, mate!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, aiml.class);
         startActivity(intent);
+        Animatoo.INSTANCE.animateSwipeLeft(this);
+
     }
     public void dataScience(View view){
         Toast.makeText(this, "Best of luck, mate!", Toast.LENGTH_SHORT).show();
