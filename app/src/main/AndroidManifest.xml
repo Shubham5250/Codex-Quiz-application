@@ -13,6 +13,13 @@
         android:theme="@style/Theme.CodeXTheCodingApp"
         tools:targetApi="31">
         <activity
+            android:name=".quiz_level"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".cloudcomputing"
             android:exported="false"
             android:label="Cloud Computing"
@@ -21,7 +28,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".uiux"
             android:exported="false"

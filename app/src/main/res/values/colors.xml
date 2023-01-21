@@ -8,15 +8,11 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="button3">#2AACF7</color>
-    <color name="button4">#2AACF7</color>
-    <color name="button5">#2AACF7</color>
-    <color name="button6">#2AACF7</color>
-    <color name="button7">#2AACF7</color>
-    <color name="button8">#2AACF7</color>
-    <color name="button9">#2AACF7</color>
 
-    <color name="mainBackground">#EDF5F5</color>
+    <color name="button5">#1982E6</color>
+
+
+    <color name="mainBackground">@drawable/background</color>
 
     <color name="textView">#000000</color>
     <color name="textView2">#2E0877</color>
