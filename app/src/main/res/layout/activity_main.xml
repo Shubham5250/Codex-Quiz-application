@@ -17,7 +17,7 @@
         android:onClick="cloudcomputing"
         android:text="cloud computing"
         android:textColor="#FFFFFF"
-        android:textSize="10sp"
+        android:textSize="14sp"
         app:backgroundTint="@color/button5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button8" />
@@ -44,7 +44,7 @@
         android:onClick="cybersecurity"
         android:text="cybersecurity"
         android:textColor="#FFFFFF"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:backgroundTint="@color/button5"
         app:layout_constraintBottom_toTopOf="@+id/button10"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,7 @@
         android:id="@+id/textView2"
         android:layout_width="304dp"
         android:layout_height="38dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:text="Select the quiz category:"
         android:textColor="@color/textView"
         android:textSize="20sp"
@@ -71,10 +71,10 @@
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/button5"
         android:onClick="webAndroid"
-        android:text="Web Android"
+        android:text="Web &amp; Android"
         android:textColor="@color/buttonText"
         android:textColorHint="#DDD8D8"
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -166,21 +166,11 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="112dp"
-        android:layout_height="106dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/developers" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/alfa_slab_one"
         android:text="CODEX"
         android:textColor="#D65B34"
@@ -189,6 +179,21 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="10dp"
+        android:tint="#FFFDF7"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/quiicon" />
 
     <!--    <TextView-->
     <!--        android:id="@+id/textView4"-->
