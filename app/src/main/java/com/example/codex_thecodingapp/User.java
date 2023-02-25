@@ -1,7 +1,7 @@
 package com.example.codex_thecodingapp;
 
 public class User {
-    private String userName;
+     String userName;
     private String email;
     private String password;
 

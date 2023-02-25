@@ -4,153 +4,403 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainBackground"
     android:layout_width="match_parent"
-    android:background="#FFFfFF"
     android:layout_height="match_parent"
+    android:background="#FFFfFF"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="345dp"
-        android:layout_height="80dp"
-        app:srcCompat="@drawable/developers" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/capriola"
+            android:text="Let's make this day productive"
+            android:textColor="#242222"
+            app:layout_constraintEnd_toEndOf="@+id/textView6"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="139dp"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Welcome"
+            android:textColor="#101010"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/imageView"
+            app:layout_constraintHorizontal_bias="0.045"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/imageView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="58dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_marginTop="36dp"
+            android:layout_weight="2"
+            android:fontFamily="@font/ubuntu_bold"
+            android:text="Let's play"
+            android:textColor="#070707"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.054"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@+id/switch1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3">
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
                 android:layout_weight="2"
-                android:padding="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="190dp"
-                    android:layout_height="141dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/webAndroid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="6dp"
                     android:onClick="webAndroid"
-                    android:layout_margin="10dp"
+                    app:cardMaxElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/webandroid_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView12"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="WEB ANDROID"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/web3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-                    android:text="Web &amp; Android"
-
-                    android:textColor="@color/buttonText"
-                    android:textColorHint="#DDD8D8"
-                    android:textSize="14sp" />
-
-                <Button
-                    android:id="@+id/button4"
-                    android:layout_width="173dp"
-                    android:layout_height="143dp"
-                    android:layout_margin="10dp"
-
-                    android:layout_weight="1"
-
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="6dp"
                     android:onClick="web3"
-                    android:text="WEB3"
-                    android:textColor="#FFFFFF"
-                    app:backgroundTint="@color/button5"
-                    app:iconTint="#AE1616" />
+
+                    app:cardMaxElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/web3_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView13"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="WEB 3.0"
+                            android:textAlignment="center"
+                            android:textColor="#100F0F"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
                 android:layout_weight="2"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="157dp"
-                    android:layout_height="91dp"
-                    android:onClick="blockchain"
-                    android:text="Blockchain"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/aiml"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-
-                    android:textColor="#FFFFFF"
-                    app:backgroundTint="@color/button5" />
-
-                <Button
-                    android:id="@+id/button6"
-                    android:layout_width="155dp"
-                    android:layout_height="92dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="6dp"
                     android:onClick="aiml"
-                    android:text="aiml"
-                    android:layout_weight="1"
 
-                    android:textColor="#FFFFFF"
-                    app:backgroundTint="@color/button5" />
+                    app:cardMaxElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/ai_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="AI ML"
+                            android:textAlignment="center"
+                            android:textColor="#121212"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/blockchain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="6dp"
+                    android:onClick="blockchain"
+
+                    app:cardMaxElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/blockchainicon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="BLOCKCHAIN"
+                            android:textAlignment="center"
+                            android:textColor="#0E0E0E"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
                 android:layout_weight="2"
 
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-                <Button
-                    android:id="@+id/button8"
-                    android:layout_width="159dp"
-                    android:layout_height="91dp"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cybersecurity"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="6dp"
                     android:onClick="cybersecurity"
-                    android:text="cybersecurity"
-                    android:textColor="#FFFFFF"
+
+                    app:cardElevation="6dp"
+                    app:cardMaxElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/cyber_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="CYBERSECURITY"
+                            android:textAlignment="center"
+                            android:textColor="#090909"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cloudcomputing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-
-                    android:textSize="14sp"
-                    app:backgroundTint="@color/button5" />
-
-                <Button
-                    android:id="@+id/button10"
-                    android:layout_width="146dp"
-                    android:layout_height="156dp"
                     android:onClick="cloudcomputing"
-                    android:text="cloud computing"
-                    android:textColor="#FFFFFF"
-                    android:layout_weight="1"
 
-                    android:textSize="14sp"
-                    app:backgroundTint="@color/button5" />
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="6dp"
+                    app:cardMaxElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/cloud_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView78"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="CLOUD COMPUTING"
+                            android:textAlignment="center"
+                            android:textColor="#101010"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="250dp"
                 android:layout_weight="2"
 
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:padding="10dp">
 
-                <Button
-                    android:id="@+id/button7"
-                    android:layout_width="154dp"
-                    android:layout_height="91dp"
-                    android:onClick="dataScience"
-                    android:text="DAta science"
-                    android:textColor="#FFFFFF"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/uiux"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
                     android:layout_weight="1"
-
-                    app:backgroundTint="@color/button5" />
-
-                <Button
-                    android:id="@+id/button9"
-                    android:layout_width="163dp"
-                    android:layout_height="152dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="6dp"
                     android:onClick="uiux"
-                    android:text="ui/ux"
-                    android:layout_weight="1"
 
-                    android:textColor="#FFFFFF"
-                    app:backgroundTint="@color/button5" />
+                    app:cardMaxElevation="6dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/ui_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView17"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="UI UX"
+                            android:textAlignment="center"
+                            android:textColor="#101010"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/datascience"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="4dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="6dp"
+                    android:onClick="dataScience"
+
+                    app:cardElevation="6dp"
+                    app:cardMaxElevation="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <include
+                            layout="@layout/data_icon"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp" />
+
+                        <TextView
+                            android:id="@+id/textView90"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/ubuntu_bold"
+                            android:text="DATA SCIENCE"
+                            android:textAlignment="center"
+                            android:textColor="#101010"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
             </LinearLayout>
 
         </LinearLayout>
@@ -160,7 +410,7 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="12dp"
         android:text="@string/shubham"
         android:textColor="@color/textView"
         android:textColorHint="#C0B9B9"
@@ -174,13 +424,12 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
+        android:layout_marginBottom="6dp"
         android:checked="false"
         android:text="@string/night_mode"
         android:textColor="@color/switch1"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
     <!--    <TextView-->
