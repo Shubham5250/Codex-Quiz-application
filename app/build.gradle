@@ -52,6 +52,7 @@ dependencies {
     implementation 'com.rengwuxian.materialedittext:library:2.1.4'
     implementation 'com.android.support:multidex:1.0.3'
 
+    implementation 'com.airbnb.android:lottie:3.7.0'
 
     //animation
     implementation 'com.github.AtifSayings:Animatoo:1.0.1'

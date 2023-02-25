@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.CodeXTheCodingApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.CodeXTheCodingApp" parent="Theme.MaterialComponents.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">#09A5FF</item>
         <item name="colorPrimaryVariant">#09A5FF</item>
