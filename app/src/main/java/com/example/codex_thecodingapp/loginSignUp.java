@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,6 +23,8 @@ import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class loginSignUp extends AppCompatActivity {
 
+    public static final String PREFS_NAME = "MyPrefsFile";
+    public static final String PREF_NAME = "MyPrefFile";
     MaterialEditText editUserEmail, editUserPassword,editUserName;
 
     MaterialEditText loginUserName, loginUserPassword;
@@ -53,6 +56,11 @@ public class loginSignUp extends AppCompatActivity {
         signUp_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                SharedPreferences sharedPreferences = getSharedPreferences(loginSignUp.PREFS_NAME,0);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putBoolean("hasRegistered",true);
+                editor.apply();
                 showSignUpDialog();
             }
         });
@@ -60,6 +68,12 @@ public class loginSignUp extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                SharedPreferences sharedPreferences = getSharedPreferences(loginSignUp.PREF_NAME,0);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+
+                editor.putBoolean("hasLoggedIn",true);
+                editor.apply();
                 login_user(loginUserName.getText().toString(), loginUserPassword.getText().toString());
             }
         });
@@ -106,6 +120,8 @@ public class loginSignUp extends AppCompatActivity {
 
     private void sendUserToNextActivity() {
         Intent intent = new Intent(loginSignUp.this,MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+
         startActivity(intent);
     }
 
@@ -124,13 +140,14 @@ public class loginSignUp extends AppCompatActivity {
         alertDialog.setView(signup);
 
 
+
+
         alertDialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 dialog.dismiss();
             }
         });
-
 
         alertDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
@@ -139,18 +156,47 @@ public class loginSignUp extends AppCompatActivity {
                         editUserEmail.getText().toString(),
                         editUserPassword.getText().toString());
 
+
                 users.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+        final String username = editUserName.getText().toString();
+        final String useremail = editUserEmail.getText().toString();
+        final String userpass = editUserPassword.getText().toString();
+
                         if(snapshot.child(user.getUserName()).exists()){
                             Toast.makeText(loginSignUp.this, "User already exists", Toast.LENGTH_SHORT).show();
+
                         }
 
+                        else if(username.isEmpty()){
+                            editUserName.setError("Username required");
+                            editUserName.requestFocus();
+                            Toast.makeText(loginSignUp.this, "User is required", Toast.LENGTH_SHORT).show();
+
+
+                        }
+                        else if(useremail.isEmpty()){
+                            editUserEmail.setError("Username required");
+                            editUserEmail.requestFocus();
+                            Toast.makeText(loginSignUp.this, "Email is required", Toast.LENGTH_SHORT).show();
+
+
+                        }
+                        else if(userpass.isEmpty()){
+                            editUserPassword.setError("Username required");
+                            editUserPassword.requestFocus();
+                            Toast.makeText(loginSignUp.this, "Password is required", Toast.LENGTH_SHORT).show();
+
+
+                        }
                         else{
                             users.child(user.getUserName())
                                     .setValue(user);
                             Toast.makeText(loginSignUp.this, "Registered successfully", Toast.LENGTH_SHORT).show();
                             sendUserToNextActivity();
+                            dialog.dismiss();
+
                         }
                     }
 
@@ -159,7 +205,6 @@ public class loginSignUp extends AppCompatActivity {
 
                     }
                 });
-                dialog.dismiss();
             }
         });
         alertDialog.show();

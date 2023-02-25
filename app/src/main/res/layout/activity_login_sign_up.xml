@@ -107,5 +107,7 @@
 
         android:id="@+id/signUp_btn"
         android:fontFamily="@font/ubuntu_bold"/>
-\
+
+
+    \
 </LinearLayout>

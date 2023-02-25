@@ -54,6 +54,7 @@ public class web3 extends AppCompatActivity {
         optionA.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 if(index<=questions.length-1){
 
                     if(validCheckA[index]){
@@ -67,6 +68,7 @@ public class web3 extends AppCompatActivity {
                         optionB.setText(optionBans[index]);
                         optionC.setText(optionCans[index]);
                         optionD.setText(optionDans[index]);
+
                     }
                     else{
                         Toast.makeText(web3.this, "Your score is: "+score+"/"+questions.length, Toast.LENGTH_SHORT).show();
