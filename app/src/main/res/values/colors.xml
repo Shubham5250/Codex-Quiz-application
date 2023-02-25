@@ -12,8 +12,6 @@
     <color name="button5">#061781</color>
 
 
-    <color name="mainBackground">@drawable/background</color>
-
     <color name="textView">#000000</color>
     <color name="textView2">#2E0877</color>
 

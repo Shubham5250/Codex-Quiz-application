@@ -4,140 +4,157 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mainBackground"
     android:layout_width="match_parent"
+    android:background="#FFFfFF"
     android:layout_height="match_parent"
-    android:background="@color/mainBackground"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button10"
-        android:layout_width="159dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="2dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="cloudcomputing"
-        android:text="cloud computing"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:backgroundTint="@color/button5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button8" />
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="345dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/developers" />
 
-    <Button
-        android:id="@+id/button9"
-        android:layout_width="159dp"
-        android:layout_height="91dp"
-        android:layout_marginBottom="116dp"
-        android:onClick="uiux"
-        android:text="ui/ux"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="@color/button5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button10"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="159dp"
-        android:layout_height="91dp"
-        android:layout_marginEnd="32dp"
-        android:onClick="cybersecurity"
-        android:text="cybersecurity"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        app:backgroundTint="@color/button5"
-        app:layout_constraintBottom_toTopOf="@+id/button10"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/switch1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button6" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="304dp"
-        android:layout_height="38dp"
-        android:layout_marginTop="80dp"
-        android:text="Select the quiz category:"
-        android:textColor="@color/textView"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.308"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="159dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/button5"
-        android:onClick="webAndroid"
-        android:text="Web &amp; Android"
-        android:textColor="@color/buttonText"
-        android:textColorHint="#DDD8D8"
-        android:textSize="14sp"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/button4"
-        android:layout_width="154dp"
-        android:layout_height="94dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="36dp"
-        android:onClick="web3"
-        android:text="WEB3"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="@color/button5"
-        app:iconTint="#AE1616"
-        app:layout_constraintBottom_toTopOf="@+id/button6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="157dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="1dp"
-        android:onClick="blockchain"
-        android:text="Blockchain"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="@color/button5"
-        app:layout_constraintBottom_toTopOf="@+id/button7"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
-        app:layout_constraintHorizontal_bias="0.469"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3" />
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="190dp"
+                    android:layout_height="141dp"
+                    android:onClick="webAndroid"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="Web &amp; Android"
 
-    <Button
-        android:id="@+id/button6"
-        android:layout_width="155dp"
-        android:layout_height="92dp"
-        android:layout_marginEnd="36dp"
-        android:onClick="aiml"
-        android:text="aiml"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="@color/button5"
-        app:layout_constraintBottom_toTopOf="@+id/button8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.0" />
+                    android:textColor="@color/buttonText"
+                    android:textColorHint="#DDD8D8"
+                    android:textSize="14sp" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="154dp"
-        android:layout_height="91dp"
-        android:onClick="dataScience"
-        android:text="DAta science"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="@color/button5"
-        app:layout_constraintBottom_toTopOf="@+id/button9"
-        app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5"
-        app:layout_constraintVertical_bias="0.0" />
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="173dp"
+                    android:layout_height="143dp"
+                    android:layout_margin="10dp"
+
+                    android:layout_weight="1"
+
+                    android:onClick="web3"
+                    android:text="WEB3"
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="@color/button5"
+                    app:iconTint="#AE1616" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="157dp"
+                    android:layout_height="91dp"
+                    android:onClick="blockchain"
+                    android:text="Blockchain"
+                    android:layout_weight="1"
+
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="@color/button5" />
+
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="155dp"
+                    android:layout_height="92dp"
+                    android:onClick="aiml"
+                    android:text="aiml"
+                    android:layout_weight="1"
+
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="@color/button5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="159dp"
+                    android:layout_height="91dp"
+                    android:onClick="cybersecurity"
+                    android:text="cybersecurity"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="1"
+
+                    android:textSize="14sp"
+                    app:backgroundTint="@color/button5" />
+
+                <Button
+                    android:id="@+id/button10"
+                    android:layout_width="146dp"
+                    android:layout_height="156dp"
+                    android:onClick="cloudcomputing"
+                    android:text="cloud computing"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="1"
+
+                    android:textSize="14sp"
+                    app:backgroundTint="@color/button5" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="154dp"
+                    android:layout_height="91dp"
+                    android:onClick="dataScience"
+                    android:text="DAta science"
+                    android:textColor="#FFFFFF"
+                    android:layout_weight="1"
+
+                    app:backgroundTint="@color/button5" />
+
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="163dp"
+                    android:layout_height="152dp"
+                    android:onClick="uiux"
+                    android:text="ui/ux"
+                    android:layout_weight="1"
+
+                    android:textColor="#FFFFFF"
+                    app:backgroundTint="@color/button5" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/textView3"
@@ -165,35 +182,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/alfa_slab_one"
-        android:text="CODEX"
-        android:textColor="#D65B34"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="10dp"
-        android:tint="#FFFDF7"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/quiicon" />
 
     <!--    <TextView-->
     <!--        android:id="@+id/textView4"-->

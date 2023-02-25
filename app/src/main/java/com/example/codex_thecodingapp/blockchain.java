@@ -17,7 +17,7 @@ public class blockchain extends AppCompatActivity {
     private String[] blockchainOptC = {"Product to Product","A computer on Blockchain network","John Mcafee","Wallet","Currency","A type of blockchain"};
     private String[] blockchainOptD = {"Private Key to Public Key","An exchange","China","In your pocket","All of above","A decentralized application"};
 
-    private boolean[] validblockOptA = {false,false,true,false,false,false,false};
+    private boolean[] validblockOptA = {false,false,true,false,false,false};
     private boolean[] validblockOptB = {true,false,false,false,false,false};
     private boolean[] validblockOptC = {false,true,false,true,false,false};
     private boolean[] validblockOptD = {false,false,false,false,true,true};
