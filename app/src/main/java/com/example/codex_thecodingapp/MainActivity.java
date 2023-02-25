@@ -13,6 +13,8 @@ import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
@@ -25,6 +27,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
 
+    LottieAnimationView lottieAnimationViewTimer;
 
     Switch switch1;
     @Override
@@ -32,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        lottieAnimationViewTimer = findViewById(R.id.lottieAnimationViewTimer);
 
         switch1 = findViewById(R.id.switch1);
         SharedPreferences sharedPreferences = null;
@@ -72,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
     public void webAndroid(View view){
+
         Toast.makeText(this, "Best of luck, mate!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, webAndroid.class);
         startActivity(intent);
@@ -116,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
     public void cloudcomputing(View view){
+
         Toast.makeText(this, "Best of luck, mate!", Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(this, cloudcomputing.class);
         startActivity(intent);

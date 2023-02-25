@@ -101,6 +101,32 @@
                 android:textColor="@drawable/text_bg"
                 app:backgroundTint="#03A9F4"
                 app:cornerRadius="@android:dimen/thumbnail_height" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/questionindex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/skip_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Skip"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp"
+                    app:backgroundTint="#03A9F4" />
+            </LinearLayout>
         </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
