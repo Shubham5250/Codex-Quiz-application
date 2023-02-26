@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
     LottieAnimationView lottieAnimationViewTimer;
 
+
     Switch switch1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch1 = findViewById(R.id.switch1);
         SharedPreferences sharedPreferences = null;
+
 
 
 

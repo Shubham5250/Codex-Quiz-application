@@ -5,12 +5,17 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
+
 public class web3 extends AppCompatActivity {
 
-    TextView questionindex;
+
+    TextView questionindex, accuracy, scoretxt;
+    LottieAnimationView lottieGood, lottieWellDone, lottieCongrats;
     Button skip_btn;
     private String[] questions = {"Q.1 Who coined the term Web3?","Q.2 Which of these concepts are related to Web3?","Q.3 Web interaction and collaborative communities are example of?","Q.4 What does AI stand for?","Q.5 Who first coined the term 'semantic web'?","Q.6 Where is information stored in Web3 world?","Q.7 Which was the first crypto launched in 2009?","Q.8 What is full form of ICO?","Q.9 Which of following is a risk of crypto trading?","Q.10 When can you trade cryptocurrency?"};
 
@@ -29,6 +34,10 @@ public class web3 extends AppCompatActivity {
     private int index = 0;
     private int score = 0;
 
+
+    private LinearLayout quiz_qna;
+    private LinearLayout result_layout;
+
     Button optionA;
     Button optionB;
     Button optionC;
@@ -36,11 +45,20 @@ public class web3 extends AppCompatActivity {
     TextView questionWeb3;
 
 
+    int accuracyper = 0;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web3);
 
+        lottieGood = findViewById(R.id.lottieGood);
+        lottieWellDone = findViewById(R.id.lottieWellDone);
+        lottieCongrats = findViewById(R.id.lottieCongrats);
+
+        accuracy = (TextView) findViewById(R.id.accuracy);
+        scoretxt =  (TextView) findViewById(R.id.scoretxt);
         questionindex = findViewById(R.id.questionindex);
 
         skip_btn = findViewById(R.id.skip_btn);
@@ -57,6 +75,13 @@ public class web3 extends AppCompatActivity {
         optionC.setText(optionCans[index]);
         optionD.setText(optionDans[index]);
         questionindex.setText((index+1)+" out of 10");
+
+
+        quiz_qna = findViewById(R.id.quiz_qna_layout);
+        result_layout = findViewById(R.id.result_layout);
+
+
+        scoretxt = findViewById(R.id.scoretxt);
 
         optionA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,6 +104,27 @@ public class web3 extends AppCompatActivity {
 
 
                     }
+                    else if(index == questions.length){
+
+
+                        if(score <=4){
+                            lottieGood.setVisibility(View.VISIBLE);
+                        }
+                        else if(score <= 7){
+                            lottieWellDone.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            lottieCongrats.setVisibility(View.VISIBLE);
+                        }
+                        quiz_qna.setVisibility(View.GONE);
+                        result_layout.setVisibility(View.VISIBLE);
+                        accuracyper = (score*100)/10;
+                        accuracy.setText(String.valueOf(accuracyper)+" %");
+                        scoretxt.setText(String.valueOf(score));
+
+                    }
+
                     else{
                         Toast.makeText(web3.this, "Your score is: "+score+"/"+questions.length, Toast.LENGTH_SHORT).show();
                     }
@@ -90,6 +136,7 @@ public class web3 extends AppCompatActivity {
         });
 
         optionB.setOnClickListener(new View.OnClickListener() {
+            int score = 0;
             @Override
             public void onClick(View v) {
                 if(index<=questions.length-1){
@@ -106,6 +153,24 @@ public class web3 extends AppCompatActivity {
                         optionC.setText(optionCans[index]);
                         optionD.setText(optionDans[index]);
                         questionindex.setText((index+1)+" out of 10");
+
+                    }
+                    else if(index == questions.length){
+                        if(score <=4){
+                            lottieGood.setVisibility(View.VISIBLE);
+                        }
+                        else if(score <= 7){
+                            lottieWellDone.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            lottieCongrats.setVisibility(View.VISIBLE);
+                        }
+                        quiz_qna.setVisibility(View.GONE);
+                        result_layout.setVisibility(View.VISIBLE);
+                        accuracyper = (score*100)/10;
+                        accuracy.setText(String.valueOf(accuracyper)+" %");
+                        scoretxt.setText(String.valueOf(score));
 
                     }
                     else{
@@ -137,6 +202,25 @@ public class web3 extends AppCompatActivity {
                         questionindex.setText((index+1)+" out of 10");
 
                     }
+                    else if(index == questions.length){
+                        if(score <=4){
+                            lottieGood.setVisibility(View.VISIBLE);
+                        }
+                        else if(score <= 7){
+                            lottieWellDone.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            lottieCongrats.setVisibility(View.VISIBLE);
+                        }
+                        quiz_qna.setVisibility(View.GONE);
+                        result_layout.setVisibility(View.VISIBLE);
+                        accuracyper = (score*100)/10;
+                        accuracy.setText(String.valueOf(accuracyper)+" %");
+                        scoretxt.setText(String.valueOf(score));
+
+
+                    }
                     else{
                         Toast.makeText(web3.this, "Your score is: "+score+"/"+questions.length, Toast.LENGTH_SHORT).show();
                     }
@@ -164,6 +248,25 @@ public class web3 extends AppCompatActivity {
                         optionC.setText(optionCans[index]);
                         optionD.setText(optionDans[index]);
                         questionindex.setText((index+1)+" out of 10");
+
+                    }
+
+                    else if(index == questions.length){
+                        if(score <=4){
+                            lottieGood.setVisibility(View.VISIBLE);
+                        }
+                        else if(score <= 7){
+                            lottieWellDone.setVisibility(View.VISIBLE);
+                        }
+                        else
+                        {
+                            lottieCongrats.setVisibility(View.VISIBLE);
+                        }
+                        quiz_qna.setVisibility(View.GONE);
+                        result_layout.setVisibility(View.VISIBLE);
+                        accuracyper = (score*100)/10;
+                        accuracy.setText(String.valueOf(accuracyper)+" %");
+                        scoretxt.setText(String.valueOf(score));
 
                     }
                     else{
