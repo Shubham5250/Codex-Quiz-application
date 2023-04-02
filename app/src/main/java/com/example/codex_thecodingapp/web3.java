@@ -2,6 +2,7 @@ package com.example.codex_thecodingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -30,7 +31,6 @@ public class web3 extends AppCompatActivity {
     private boolean[] validCheckD={true,false,false,false,false,false,true,false,true,true};
     boolean[] validCheckSkipBtn = {false,false,false,false,false,false,false,false,false,false};
 
-
     private int index = 0;
     private int score = 0;
 
@@ -42,6 +42,7 @@ public class web3 extends AppCompatActivity {
     Button optionB;
     Button optionC;
     Button optionD;
+    Button replay;
     TextView questionWeb3;
 
 
@@ -81,7 +82,30 @@ public class web3 extends AppCompatActivity {
         result_layout = findViewById(R.id.result_layout);
 
 
+        replay = findViewById(R.id.replay);
+        replay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+           moreQuizzes();
+            }
+        });
         scoretxt = findViewById(R.id.scoretxt);
+
+
+        startQuiz();
+
+    }
+
+
+    public void moreQuizzes(){
+        Intent intent = new Intent(web3.this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void startQuiz(){
+
+
+
 
         optionA.setOnClickListener(new View.OnClickListener() {
             @Override

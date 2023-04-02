@@ -134,6 +134,10 @@
 
     <LinearLayout
         android:id="@+id/result_layout"
+        android:elevation="4dp"
+        android:layout_margin="20dp"
+        android:padding="30dp"
+        android:background="@drawable/questions_bg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -149,6 +153,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/ubuntu_bold"
             android:text="Result"
+            android:layout_margin="5dp"
             android:textAlignment="center"
             android:textColor="#03A9F4"
             android:textSize="24sp" />
@@ -156,11 +161,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/ubuntu_bold"
@@ -172,40 +180,44 @@
 
             <TextView
                 android:id="@+id/scoretxt"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+
                 android:fontFamily="@font/ubuntu_bold"
                 android:paddingEnd="30dp"
-                android:textAlignment="viewEnd"
+                android:textAlignment="center"
                 android:textColor="#1F1D1D"
                 android:textSize="18sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_weight="2"
+            android:layout_margin="5dp"
+
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/ubuntu_bold"
                 android:paddingStart="30dp"
-                android:text="ACCURACY"
+                android:text="ACCURACY:"
                 android:textAlignment="viewStart"
                 android:textColor="#10B534"
                 android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/accuracy"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/ubuntu_bold"
                 android:paddingEnd="30dp"
-                android:textAlignment="viewEnd"
+                android:textAlignment="center"
                 android:textColor="#171717"
                 android:textSize="18sp" />
         </LinearLayout>
@@ -214,6 +226,15 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
+            <Button
+                android:id="@+id/replay"
+                android:onClick="web3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Play more quizzes"
+                android:textColor="@color/white"/>
+
+
 
         </LinearLayout>
     </LinearLayout>
